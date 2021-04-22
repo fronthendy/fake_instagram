@@ -5,7 +5,10 @@ const usuariosController = {
         const usuarios =  await Usuario.findAll();
         
         return response.render('usuarios', { listaUsuarios: usuarios });
-    },  
+    }, 
+    login: (request, response) => {
+        return response.render('login');
+    }, 
     registro: (request, response) => {
         return response.render('registro');
     },
@@ -18,7 +21,7 @@ const usuariosController = {
             senha
         });
 
-        return response.json(novoUsuario);
+        return response.redirect('/usuarios/login');
     },
     update: async (request, response) => {
         const { id } = request.params;
