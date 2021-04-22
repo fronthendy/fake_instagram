@@ -5,7 +5,6 @@ const postsController = {
     index: async (request, response) => {
         const posts = await Post.findAll({
             include: ['usuario', 'comentarios', 'curtiu']
-        
         });
 
         return response.render('index', { listaPosts: posts });

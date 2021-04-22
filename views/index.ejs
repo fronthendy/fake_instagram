@@ -32,20 +32,16 @@
                     <p> <%= post.texto %> </p>
                     <div class="likes">
                         <img src="img/icons/heart.svg" alt="botão like">
-                        <span><%= post.n_likes %> likes</span>
+                        <span><%= post.curtiu.length %> likes</span>
                     </div>
                     <strong class="data">Postado no dia: 16/04/2020</strong>
                 </div>
                 <ol>
+                    <% for (let comentario of post.comentarios) { %>
                     <li>
-                        <p>Deu até fome!</p>
+                        <p> <%= comentario.texto  %> </p>
                     </li>
-                    <li>
-                        <p>Uhh adorei</p>
-                    </li>
-                    <li>
-                        <p>Prefiro feijoada!</p>
-                    </li>
+                    <% } %>
                 </ol>
             </div>
         </article>

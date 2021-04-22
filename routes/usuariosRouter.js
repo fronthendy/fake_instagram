@@ -6,6 +6,9 @@ const ValidarCadastro = require('../middlewares/ValidarCadastro');
 router.get('/', usuariosController.index);
 // http://localhost:3000/usuarios/
 
+router.get('/registro', usuariosController.registro);
+// http://localhost:3000/usuarios/registro
+
 router.post('/', ValidarCadastro, usuariosController.create);
 // http://localhost:3000/usuarios/
 

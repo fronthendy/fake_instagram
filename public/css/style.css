@@ -17,7 +17,11 @@ main {
     /* alinhamento na vertical */
     padding: 50px 0px;
     /* 50px para cima e para baixo, 0px para laterais */
+}
+
+main.lista-posts {
     flex-direction: column;
+
 }
 
 .logo {
