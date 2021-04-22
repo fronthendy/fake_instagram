@@ -48,6 +48,8 @@ const postsController = {
 
         return response.json(postDeletado);
     }
+
+    
 }   
 
 module.exports = postsController;
