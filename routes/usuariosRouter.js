@@ -9,11 +9,12 @@ router.get('/', usuariosController.index);
 router.get('/login', usuariosController.login);
 // http://localhost:3000/usuarios/login
 
+router.post('/login', usuariosController.auth);
+
 router.get('/registro', usuariosController.registro);
 // http://localhost:3000/usuarios/registro
 
 router.post('/', ValidarCadastro, usuariosController.create);
-// http://localhost:3000/usuarios/
 
 router.put('/:id', usuariosController.update);
 // http://localhost:3000/usuarios/1

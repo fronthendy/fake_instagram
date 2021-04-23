@@ -10,6 +10,17 @@ const usuariosController = {
     login: (request, response) => {
         return response.render('login');
     }, 
+    auth: async (request, response) => {
+        const { email, senha } = request.body;
+
+        const usuario = await Usuario.findOne({
+            where: { email }
+        });
+
+        if (usuario && bcrypt.compareSync(senha, usuario.senha)) {
+            request.session.usuarioLogado = usuario;
+        }
+    },
     registro: (request, response) => {
         return response.render('registro');
     },
