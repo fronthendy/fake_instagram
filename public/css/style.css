@@ -55,6 +55,13 @@ main.lista-posts {
     border: none;
 }
 
+.alert {
+    background-color: rgb(218, 137, 137);
+    color: white;
+    display: inline-block;
+    text-align: center;
+}
+
 /* fim style login  */
 header {
     width: 100%;
