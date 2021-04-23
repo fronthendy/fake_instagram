@@ -18,7 +18,10 @@ const usuariosController = {
         });
 
         if (usuario && bcrypt.compareSync(senha, usuario.senha)) {
-            request.session.usuarioLogado = usuario;
+            request.session.usuarioLogado = usuario; //criando atributo usuarioLogado na session
+            return response.redirect('/'); // redirecionando para pagina inicial
+        } else {
+            return response.redirect('/usuarios/login');
         }
     },
     registro: (request, response) => {
